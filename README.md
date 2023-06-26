@@ -1,2 +1,1 @@
 # SwiftPlus
-Swift operator extensions

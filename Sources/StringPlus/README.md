@@ -1,4 +1,4 @@
-#String+
+# String+
 
 String+ is an extension for the Swift String class that provides additional functionalities for string manipulation.
 

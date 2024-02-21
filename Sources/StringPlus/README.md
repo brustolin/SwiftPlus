@@ -19,7 +19,7 @@ let str = "Hello, World!"
 let substring = str[0..<5] // Returns: "Hello"
 ```
 
-+++ Custom Operator <|
+### Custom Operator <|
 The <| operator is used to return the first argument if it is not nil nor empty; otherwise, it returns the second argument.
 
 ```swift

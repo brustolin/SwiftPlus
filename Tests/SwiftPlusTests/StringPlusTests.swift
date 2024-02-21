@@ -1,6 +1,5 @@
 import XCTest
 import SwiftPlus
-import DontUseThis
 
 final class StringPlusTests: XCTestCase {
     func test_StringEmptyOrDefault() throws {

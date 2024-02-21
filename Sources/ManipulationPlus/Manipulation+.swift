@@ -23,7 +23,6 @@ func .. <TYPE>(lhs : TYPE, rhs : (TYPE) -> Void) -> TYPE where TYPE : AnyObject 
     return lhs
 }
 
-
 /**
  * Use the given object as argument to a closure.
  *

@@ -13,6 +13,9 @@ If you only need extensions related to String manipulation, include the followin
 .package(url: "https://github.com/brustolin/SwiftPlus"),
 .product(name: "StringPlus", package: "Swift+")
 ```
+[How to use it](Sources/StringPlus)
+
+
 ### Number Manipulation Extensions
 If you only need extensions related to Number manipulation, include the following lines in your Package.swift file:
 
@@ -20,6 +23,7 @@ If you only need extensions related to Number manipulation, include the followin
 .package(url: "https://github.com/brustolin/SwiftPlus"),
 .product(name: "NumberPlus", package: "Swift+")
 ```
+[How to use it](Sources/NumberPlus)
 
 ### Object Manipulation Extensions
 If you only need extensions related to object manipulation, include the following lines in your Package.swift file:
@@ -28,6 +32,9 @@ If you only need extensions related to object manipulation, include the followin
 .package(url: "https://github.com/brustolin/SwiftPlus"),
 .product(name: "ManipulationPlus", package: "Swift+")
 ```
+
+[How to use it](Sources/ManipulationPlus)
+
 ### All of the above
 If you want all of the extensions, include the following lines in your Package.swift file:
 ```swift

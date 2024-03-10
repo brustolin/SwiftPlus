@@ -1,3 +1,9 @@
+
+/**
+ * Extensions for FixedWidthInteger
+ *
+ * Everybody know Apple was wrong to not include this in the language 😁
+ */
 public extension FixedWidthInteger {
     @inlinable
     @discardableResult

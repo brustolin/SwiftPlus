@@ -1,3 +1,6 @@
+/**
+ * String subscript extensions
+ */
 public extension String {
     /// Retrieve a character at a specific index in the string.
     subscript (value: Int) -> Character {
@@ -35,7 +38,12 @@ public extension String {
         let end = index(startIndex, offsetBy: range.upperBound)
         return self[startIndex..<end]
     }
+}
 
+/**
+ String null or empty manipulation extensions
+ */
+public extension String {
     /**
      * Return the first argument if it is not nil nor empty,
      * otherwise return the second argument
@@ -47,4 +55,37 @@ public extension String {
 
         return rhs
     }
+}
+
+/**
+ * String helper tools extensions
+ */
+public extension String {
+    
+    func convertRange(_ range : Range<Int>) -> Range<String.Index> {
+        return index(startIndex, offsetBy: range.lowerBound)..<index(startIndex, offsetBy: range.upperBound)
+    }
+    
+    func linesInRange(range: Range<String.Index>) -> Range<Int>? {
+        var sub = self.suffix(from: startIndex)
+        var lineIndex = 0
+        var begin : Int? = nil
+        var end : Int? = nil
+        while (sub.count > 0) {
+            let newLine = sub.firstIndex(of: "\n") ?? endIndex
+            if newLine > range.lowerBound && begin == nil {
+                begin = lineIndex
+            }
+            if newLine > range.upperBound  {
+                end = lineIndex
+                break
+            }
+            sub = self.suffix(from: newLine).dropFirst()
+            lineIndex += 1
+        }
+        
+        guard let begin else { return nil }
+        return begin..<(end ?? lineIndex)
+    }
+    
 }

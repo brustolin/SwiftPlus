@@ -18,7 +18,7 @@
  * You may omit the argument and use the $ notation: `{ $0.customProperty = "Some Value" }`
  */
 @inlinable
-func .. <TYPE>(lhs : TYPE, rhs : (TYPE) -> Void) -> TYPE where TYPE : AnyObject {
+public func .. <TYPE>(lhs : TYPE, rhs : (TYPE) -> Void) -> TYPE where TYPE : AnyObject {
     rhs(lhs)
     return lhs
 }
@@ -37,7 +37,7 @@ func .. <TYPE>(lhs : TYPE, rhs : (TYPE) -> Void) -> TYPE where TYPE : AnyObject 
  * ```
  */
 @inlinable
-func <- <TYPE>(lhs : TYPE, rhs : (TYPE) -> Void) where TYPE : AnyObject {
+public func <- <TYPE>(lhs : TYPE, rhs : (TYPE) -> Void) where TYPE : AnyObject {
     rhs(lhs)
 }
 
@@ -64,6 +64,25 @@ func <- <TYPE>(lhs : TYPE, rhs : (TYPE) -> Void) where TYPE : AnyObject {
  * You use less chaining and variable creation.
  */
 @inlinable
-func >-> <TYPE,RESULT>(lhs : TYPE, rhs :  (TYPE) -> RESULT) -> RESULT {
+public func >-> <TYPE,RESULT>(lhs : TYPE, rhs :  (TYPE) -> RESULT) -> RESULT {
     return rhs(lhs)
+}
+
+/**
+ * This Nil-Coalescing Operator will try to cast the first parameter
+ * to the same type of the second parameter, so no need to cast when
+ * trying to use a nil coalescing operator.
+ *
+ * In the following example, `cell` will be a `UITableViewCell`, which prevent
+ * the developer to call the custom properties and methods.
+ *
+ * ```
+ * let cell = tableview.dequeueReusableCell(withIdentifier: "IDENTIFIER") ??? CustomCellView()
+ * ```
+ * By using the casting Nil-Coalescing operator `cell` will be a `CustomCellView`
+ *
+ */
+@inlinable
+public func ??? <TYPE>(lhs : Any?, rhs : TYPE) -> TYPE {
+    return lhs as? TYPE ?? rhs
 }

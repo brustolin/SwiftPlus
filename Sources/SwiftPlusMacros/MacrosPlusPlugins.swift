@@ -11,6 +11,7 @@ import SwiftSyntaxMacros
 @main
 struct MacrosPlusPlugins: CompilerPlugin {
     let providingMacros: [Macro.Type] = [
-        URLMacro.self
+        URLMacro.self,
+        GuardMacro.self,
     ]
 }

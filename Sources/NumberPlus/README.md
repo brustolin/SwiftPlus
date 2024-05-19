@@ -33,19 +33,3 @@ let y = 2.5
 
 print("\(x + y)")
 ```
-
-### Implicit arithmetic operations between `Float` and `Double`
-
-**Features**
-
-- Allows Implicit arithmetic operations (+, -, *, /) between `Float` and `Double`.
-- Ensures the result of operations between Float and Double is always a Double.
-
-The following code, that usually is an error, will now compile: 
-
-```swift
-let x : Float = 1.5
-let y : Double = 2.5
-
-print("\(x + y)")
-```

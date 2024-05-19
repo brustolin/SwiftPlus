@@ -17,3 +17,35 @@ print(myNumber--) // prints 1 and decrement myNumber to 0
 print(++myNumber) // Increment myNumber to 1 and print it
 print(--myNumber) // Decrement myNumber to 0 and print it
 ```
+
+### Implicit arithmetic operations between `Int` and `FloatingPoint`
+
+**Features**
+
+- Allows Implicit arithmetic operations (+, -, *, /) between `Int` and `any FloatingPoint` type (Float, Double, etc.).
+- Ensures the result of operations between Int and FloatingPoint is always a FloatingPoint.
+
+The following code, that usually is an error, will now compile: 
+
+```swift
+let x = 1
+let y = 2.5
+
+print("\(x + y)")
+```
+
+### Implicit arithmetic operations between `Float` and `Double`
+
+**Features**
+
+- Allows Implicit arithmetic operations (+, -, *, /) between `Float` and `Double`.
+- Ensures the result of operations between Float and Double is always a Double.
+
+The following code, that usually is an error, will now compile: 
+
+```swift
+let x : Float = 1.5
+let y : Double = 2.5
+
+print("\(x + y)")
+```

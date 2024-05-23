@@ -28,16 +28,6 @@ You may also use the $0 notation to omit the argument:
 MyViewController() .. { $0.customProperty = "Some Value" }
 ```
 
-### Scope Use Operator `<-`
-The `<-` operator allows you to use the given object as an argument to a closure. This is useful when you need to modify properties or perform operations on an object, especially when chaining properties or invoking methods.
-
-```swift
-// Example Usage:
-UINavigationBar.appearance() <- {
-    $0.barTintColor = .blue
-    $0.prefersLargeTitles = true
-}
-```
 ### Transform Operator `>->`
 The `>->` operator allows you to use the given object as an argument to a closure and optionally return a different object. This is particularly useful when you need to transform the object or obtain specific properties from it.
 

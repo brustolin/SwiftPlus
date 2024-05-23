@@ -18,27 +18,10 @@
  * You may omit the argument and use the $ notation: `{ $0.customProperty = "Some Value" }`
  */
 @inlinable
+@discardableResult
 public func .. <TYPE>(lhs : TYPE, rhs : (TYPE) -> Void) -> TYPE where TYPE : AnyObject {
     rhs(lhs)
     return lhs
-}
-
-/**
- * Use the given object as argument to a closure.
- *
- * Use this with the return of functions, or chained properties that need to be modified.
- *
- * ```
- * UINavigationBar.appearance() <- {
- *  $0.barTintColor = .blue
- *  $0.prefersLargeTitles = true
- * }
- *
- * ```
- */
-@inlinable
-public func <- <TYPE>(lhs : TYPE, rhs : (TYPE) -> Void) where TYPE : AnyObject {
-    rhs(lhs)
 }
 
 /**

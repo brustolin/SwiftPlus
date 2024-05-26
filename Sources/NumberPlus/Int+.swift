@@ -21,7 +21,7 @@ public extension Int {
     }
     
     static func - <FLOATING : FloatingPoint>(lhs: Int, rhs: FLOATING) -> FLOATING {
-        return FLOATING(lhs) + rhs
+        return FLOATING(lhs) - rhs
     }
     
     static func / <FLOATING : FloatingPoint>(lhs: FLOATING, rhs: Int) -> FLOATING {
@@ -37,6 +37,6 @@ public extension Int {
     }
     
     static func - <FLOATING : FloatingPoint>(lhs: FLOATING, rhs: Int) -> FLOATING {
-        return lhs + FLOATING(rhs)
+        return lhs - FLOATING(rhs)
     }
 }

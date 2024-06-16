@@ -1,6 +1,6 @@
 import Foundation
 
-extension Sequence {
+public extension Sequence {
     func asyncMap<T>(_ transform: (Element) async throws -> T) async rethrows -> [T]
     {
         var values = [T]()

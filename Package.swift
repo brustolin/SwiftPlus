@@ -17,6 +17,9 @@ let package = Package(
             name: "ManipulationPlus",
             targets: ["ManipulationPlus"]),
         .library(
+            name: "CollectionPlus",
+            targets: ["CollectionPlus"]),
+        .library(
             name: "TooFar",
             targets: ["TooFar"]),
     ],
@@ -25,7 +28,8 @@ let package = Package(
             name: "SwiftPlus",
             dependencies: ["StringPlus",
                            "NumberPlus",
-                           "ManipulationPlus"]
+                           "ManipulationPlus",
+                           "CollectionPlus"]
         ),
         .target(
             name: "StringPlus"
@@ -35,6 +39,9 @@ let package = Package(
         ),
         .target(
             name: "ManipulationPlus"
+        ),
+        .target(
+            name: "CollectionPlus"
         ),
         .target(
             name: "TooFar",

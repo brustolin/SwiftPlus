@@ -1,6 +1,6 @@
 # Manipulation+
 
-The Object Operator Functions provide a set of Swift operators to simplify object manipulation operations.
+The Manipulation+ provide a set of Swift operators to simplify object manipulation operations.
 
 ## Usage
 

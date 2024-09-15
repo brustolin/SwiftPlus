@@ -1,8 +1,9 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 5.10
 import PackageDescription
 
 let package = Package(
     name: "Swift+",
+    platforms: [ .macOS(.v12), .iOS(.v13), .watchOS(.v8), .visionOS(.v1), .tvOS(.v13) ],
     products: [
         .library(
             name: "SwiftPlus",

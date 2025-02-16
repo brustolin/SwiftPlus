@@ -66,6 +66,6 @@ public func >-> <TYPE,RESULT>(lhs : TYPE, rhs :  (TYPE) -> RESULT) -> RESULT {
  *
  */
 @inlinable
-public func ??? <TYPE>(lhs : Any?, rhs : TYPE) -> TYPE {
-    return lhs as? TYPE ?? rhs
+public func ??? <TYPE>(lhs : Any?, rhs : @autoclosure () -> TYPE) -> TYPE {
+    return lhs as? TYPE ?? rhs()
 }
